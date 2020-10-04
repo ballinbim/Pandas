@@ -128,13 +128,17 @@ print(word_lengths)
 dict={"Sedan": 1500, "SUV": 2000, "Pickup": 2500, "Minivan": 1600, "Van": 2400, 
 "Semi": 13600, "Bicycle": 7, "Motorcycle": 110}
 
+# for names, value in dict:
+#     lat = fire["latitude"]
+#     lon = fire["longitude"]
+#     bright = fire["brightness"]
+#     if bright > 450:
+#         lons.append(lon)
+#         lats.append(lat)
+#         brightness.append(bright)
 
-names = [names[0] for word in list_of_words]
-print(items)
 
-upper = [x.upper() for x in ["a", "b", "c"]]
-print(upper)
-list_of_names = [names for weight in names,weight if weight < 5000]
+list_of_names = [names for names,weight in dict.items() if weight < 5000]
 print(list_of_names)
-# upper = [names.upper() for x in ["a", "b", "c"]]
-# print(upper)
+upper = [x.upper() for x in list_of_names]
+print(upper)
